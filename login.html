@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block title %}Login | CipherShield{% endblock %}{% block content %}
+<div class="formbox"><h2>Welcome back</h2><p>Sign in to your secure workspace.</p><form method="post">
+<label>Username</label><input name="username" required autocomplete="username">
+<label>Password</label><input name="password" type="password" required autocomplete="current-password">
+<button>Login</button></form><p class="small">New here? <a href="/register">Create an account</a></p>
+<div class="hint"><b>Demo admin:</b> admin / Admin@123</div></div>{% endblock %}

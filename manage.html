@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block content %}<div class="heading"><span class="eyebrow">AUTHORIZED ACCESS</span><h1>User management</h1><p>Accessible to Admin and Manager roles.</p></div>
+<div class="formbox wide"><table><tr><th>ID</th><th>Username</th><th>Role</th></tr>{% for u in users %}<tr><td>{{u.id}}</td><td>{{u.username}}</td><td><span class="pill">{{u.role}}</span></td></tr>{% endfor %}</table></div>{% endblock %}

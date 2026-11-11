@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<div class="heading"><span class="eyebrow">SECURE WORKSPACE</span><h1>Dashboard</h1><p>Welcome, {{ session.username }}.</p></div>
+<div class="rolecard"><span class="muted">YOUR CURRENT ROLE</span><h2>{{ session.role|upper }}</h2><p>Available pages are controlled by your assigned role.</p></div>
+<div class="cards">
+{% if session.role == 'admin' %}<article><h3>Admin panel</h3><p>View registered accounts and create managers.</p><a href="/admin">Open admin panel →</a></article>{% endif %}
+{% if session.role in ['admin','manager'] %}<article><h3>User management</h3><p>View account list.</p><a href="/manage">Open management →</a></article>{% endif %}
+<article><h3>My profile</h3><p>View your account information.</p><a href="/profile">Open profile →</a></article></div>{% endblock %}

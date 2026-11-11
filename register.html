@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}Register | CipherShield{% endblock %}{% block content %}
+<div class="formbox"><h2>Create account</h2><p>New registrations receive the standard User role.</p><form method="post">
+<label>Username</label><input name="username" minlength="3" required>
+<label>Password</label><input name="password" type="password" minlength="8" required>
+<button>Create account</button></form><p class="small">Already registered? <a href="/login">Login</a></p></div>{% endblock %}

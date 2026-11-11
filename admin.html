@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}<div class="heading"><span class="eyebrow">ADMINISTRATOR</span><h1>Admin panel</h1><p>Only administrators can access this page.</p></div>
+<div class="formbox wide"><h2>Create manager</h2><form method="post" action="/admin/create-manager" class="inlineform">
+<input name="username" placeholder="Manager username" minlength="3" required><input name="password" type="password" placeholder="Temporary password (8+ chars)" minlength="8" required><button>Create</button></form></div>
+<div class="formbox wide"><h2>All accounts</h2><table><tr><th>ID</th><th>Username</th><th>Role</th></tr>{% for u in users %}<tr><td>{{u.id}}</td><td>{{u.username}}</td><td><span class="pill">{{u.role}}</span></td></tr>{% endfor %}</table></div>{% endblock %}
